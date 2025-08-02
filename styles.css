@@ -1,0 +1,194 @@
+/* Welcome Screen */
+.welcome-screen {
+  position: fixed;
+  z-index: 999;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: opacity 1s ease;
+}
+
+.welcome-content {
+  text-align: center;
+  color: white;
+  font-family: 'Courier New', monospace;
+}
+
+.welcome-content h1 {
+  font-size: 2.5em;
+}
+
+.welcome-content p {
+  margin: 20px 0;
+  font-size: 1.2em;
+}
+
+.welcome-content button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: white;
+  color: #ff80ab;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.welcome-content button:hover {
+  background-color: #ffe4ec;
+}
+
+/* Halaman utama (disembunyikan awalnya) */
+.main-content {
+  display: none;
+}
+
+/* Reset & Font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', monospace;
+  background: linear-gradient(to right, #fff1f0, #fce4ec);
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background: #ff80ab;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+/* Card */
+.card {
+  background: #fff3e0;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Gallery Polaroid */
+.gallery {
+  margin-top: 30px;
+}
+
+.gallery h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.photos {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.polaroid {
+  background: white;
+  padding: 10px 10px 25px 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 160px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+  font-family: 'Courier New', monospace;
+  color: #555;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.polaroid p {
+  margin-top: 10px;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.polaroid:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px;
+  background: #ff80ab;
+  color: white;
+  border-radius: 0 0 20px 20px;
+}
+
+/* Musik Button */
+#music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #ffb6c1;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Hati Jatuh */
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  top: -20px;
+  font-size: 20px;
+  color: #ff4081;
+  animation: fall linear;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.heart::before {
+  content: "💖";
+}
